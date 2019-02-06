@@ -19,8 +19,8 @@ plot(dplr$Time,dplr$Open.x,type = "l")
 lines(dplr$Time,sma_EURUSD,col = "green")
 
 
-plot(dplr$Time,dplr$Open.x,type = "l",xlim=c(as.POSIXct('2018-08-29 12:30:00', 
+plot(dplr$Time,dplr$Open.x,type = "l",xlim=c(as.POSIXct('2018-08-29 19:30:00', 
                                     format="%Y-%m-%d %H:%M:%S"),as.POSIXct('2018-08-30 19:00:00',
-                                    format="%Y-%m-%d %H:%M:%S")),ylim = c(1.1625,1.1725))
+                                    format="%Y-%m-%d %H:%M:%S")),ylim = c(1.164,1.172))
 lines(dplr$Time,sma_EURUSD,col = "green")
 
