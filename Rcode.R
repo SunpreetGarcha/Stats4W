@@ -1,12 +1,17 @@
 library(readxl)
 library(flipTime)
+## BMB: package ‘flipTime’ is not available (for R Under development)
+## if you depend on an off-CRAN package, give info (commented out) e.g.
+##   remotes::install_github("Displayr/flipTime")
 library(dplyr)
 library(TTR)
 
 #Data Retrieved from: "https://www.histdata.com/download-free-forex-data/"
-
-EURUSD2018 <- read_excel("C:/Users/sunpr/Desktop/Stats 4WW3/EURUSD2018.xlsx")
-EURJPY2018 <- read_excel("C:/Users/sunpr/Desktop/Stats 4WW3/EURJPY2018.xlsx")
+## BMB: NO ABSOLUTE PATHNAMES PLEASE
+## use a project, or switch your working directory
+## see https://www.tidyverse.org/articles/2017/12/workflow-vs-script/
+EURUSD2018 <- read_excel("EURUSD2018.xlsx")
+EURJPY2018 <- read_excel("EURJPY2018.xlsx")
 
 EURUSD2018$Time <- AsDateTime(EURUSD2018$Time)
 EURJPY2018$Time <- AsDateTime(EURJPY2018$Time)
@@ -41,3 +46,4 @@ lines(dplr$Time,sma_EURUSD,col = "green")
 lines(dplr$Time,bbands.EURUSD[,1],col = "red")
 lines(dplr$Time,bbands.EURUSD[,2],col = "blue")
 lines(dplr$Time,bbands.EURUSD[,3],col = "purple")
+
