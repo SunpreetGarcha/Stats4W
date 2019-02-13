@@ -44,3 +44,4 @@ lines(dplr$Time,sma_EURUSD,col = "green")
 lines(dplr$Time,bbands.EURUSD[,1],col = "red")
 lines(dplr$Time,bbands.EURUSD[,2],col = "blue")
 lines(dplr$Time,bbands.EURUSD[,3],col = "purple")
+
