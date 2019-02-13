@@ -1,12 +1,15 @@
 library(readxl)
+# require(devtools)
+# install_github("Displayr/flipTime")
 library(flipTime)
 library(dplyr)
 library(TTR)
+library(here)
 
 #Data Retrieved from: "https://www.histdata.com/download-free-forex-data/"
 
-EURUSD2018 <- read_excel("C:/Users/sunpr/Desktop/Stats 4WW3/EURUSD2018.xlsx")
-EURJPY2018 <- read_excel("C:/Users/sunpr/Desktop/Stats 4WW3/EURJPY2018.xlsx")
+EURUSD2018 <- read_excel(here("EURUSD2018.xlsx"))
+EURJPY2018 <- read_excel(here("EURJPY2018.xlsx"))
 
 EURUSD2018$Time <- AsDateTime(EURUSD2018$Time)
 EURJPY2018$Time <- AsDateTime(EURJPY2018$Time)
